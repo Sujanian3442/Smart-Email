@@ -16,7 +16,7 @@ function App() {
        setLoading(true);
        setError('');
        try{
-          const response = await axios.post("smart-email-backend-production.up.railway.app",{
+          const response = await axios.post("https://smart-email-backend-production.up.railway.app/generate",{
             emailContent,
             tone
           });
