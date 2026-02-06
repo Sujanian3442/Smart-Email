@@ -22,7 +22,7 @@ function App() {
           });
           setGeneratedReply(typeof response.data === 'string' ? response.data : JSON.stringify(response.data));
        }catch (error) {
-        setError(error + 'Failed to generate email reply. Please try again');
+        setError("AI limit reached" + 'Failed to generate email reply. Please try again later');
         console.error(error);
        }finally {
         setLoading(false);
